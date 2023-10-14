@@ -1,36 +1,37 @@
 :root {
     --dark: #1f2937;
-    --white: #e88;
+    --white: #fffafa;
     --blue: #2882f6;
     --quotebg: #e5e7eb;
 }
-/* {
-    outline: 1px solid cadetblue;
-}*/
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 12px;
+    justify-content: center;
     background-color: var(--dark);
     color: #f9faf8;
+    padding: 0;
 }
 
 ul{
     list-style-type: none;
     margin: 0;
     display: flex;
-    flex-direction: row;
 }
+
 a {
     color: white;
     text-decoration: none;
 } 
+
 li {
-    padding: 18px;
-    
+    padding: 12px;
+    transition: background-color 0.2s;
 }
+
 button {
     font: bold 16px Arial;
     color: white;
@@ -39,40 +40,50 @@ button {
     border: #e5e7eb;
     border-radius: 5px;
     background-color: var(--blue);
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+li:hover {
+    background-color: rgb(0, 0, 20);
+}
+
+button:hover {
+    background-color: royalblue;
+}
+.section {
+    margin: 0 0;
+    padding: 38px 24px;
 }
 .header{
-
-    margin: 0;
-    padding: auto;
     display: flex;
     flex-direction: column;
+    margin: 16px 32px;
 }
+
 .head {
-    
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 50px;
-    gap: 24px;
+    gap: 4px;
+    
 }
 
 .head-logo,
-.one-title {
+.main-title {
     font: bolder 48px Arial;
 }
 
 .head-link,
-.one-desc {
+.main-desc {
     font-size: 18px;
     color: #e5e7eb;
 }
 
-.sec-one{
+.sec-main{
     background-color: var(--dark);
     color: #f9faf8;
-    display: flex;
-    flex-direction: row;   
-    justify-content: space-around;
+    display: flex; 
+    justify-content: center;
     gap: 24px; 
 }
 
@@ -85,7 +96,113 @@ button {
 }
 
 .image1{
-    background-color: rgb(0, 0, 0);
-    width: 600px;
-    height: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    max-height: auto;
+    align-self: center;
 }
+
+.center {
+    background-color: var(--white);
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 38px 0;
+}
+
+ .center-title {
+    font-size: 36px;
+    font-weight: bolder;
+    margin: 28px 0;
+ }
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    gap: 0;
+}
+
+ .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    margin: 0;
+ }
+
+ .image-box {
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    width: 200px;
+    height: 200px;
+ }
+
+ .desc-box {
+    text-align: center;
+    max-width: 200px;
+ }
+
+ .quote {
+    background-color: var(--quotebg);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 52px 0;
+ }
+ .quote-text {
+    font-size: 36px;
+    color: #1d2937;
+    max-width: 60%;
+    font-style: italic;
+    margin: auto;
+ }
+
+ .quote-firm {
+    align-self: flex-end;
+    font-weight: bold;
+    margin-right: 25%;
+ }
+
+ .sign {
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+ }
+
+  .main-box {
+    background-color: var(--blue);
+    padding: 28px 68px;
+    border-radius: 10px;
+    display: inline-block;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 28px;
+  }
+
+  .sign-title{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .sign-button {
+    border: 3px solid white
+  }
+ 
+  .footer {
+    text-align: center;
+    font-size: 16px;
+    padding: 32px;
+  }
+
+  @media screen and (max-width:900px) {
+    .sec-main,
+    .content {
+        flex-wrap: wrap;
+    }
+  }
